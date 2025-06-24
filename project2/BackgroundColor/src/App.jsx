@@ -1,28 +1,32 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
 
 function App() {
-    function ChangeColor(){
-        
-    }
+    const [color , setColor]= useState("olive");
+
   return (
-    <>
-        <div className='ChangeColor'>
-            <button className=" bg-red-600 m-2">Red</button>
-            <button className="bg-green-600 m-2">Green</button>
-            <button className="bg-blue-600 m-2">Blue</button>
-            <button className="bg-lime-500 m-2">Olive</button>
-            <button className="bg-gray-500 m-2">Gray</button>
-            <button className="bg-yellow-500 m-2">Yellow</button>
-            <button className="bg-pink-500 m-2">Pink</button>
-            <button className="bg-purple-500 m-2">Purple</button>
-            <button className="bg-lime-500 m-2">Lavender</button>
-            <button className="bg-white text-black m-2">White</button>
-            <button className="bg-black m-2">Black</button>
+    <div className="w-full h-screen duration-200"
+    style={{backgroundColor : color}}
+    >
+        <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2' 
+        >
+            <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl'
+            >
+            <button onClick={()=>setColor("green")} className="outline-none px-4 py-1 rounded-full bg-green-600 m-2">Green</button>
+            <button onClick={()=>setColor("red")}   className="outline-none px-4 py-1 rounded-full bg-red-600 m-2">Red</button>
+            <button onClick={()=>setColor("blue")}  className="outline-none px-4 py-1 rounded-full bg-blue-600 m-2">Blue</button>
+            <button onClick={()=>setColor("olive")} className="outline-none px-4 py-1 rounded-full bg-lime-500 m-2">Olive</button>
+            <button onClick={()=>setColor("gray")} className="outline-none px-4 py-1 rounded-full bg-gray-500 m-2">Gray</button>
+            <button onClick={()=>setColor("yellow")} className="outline-none px-4 py-1 rounded-full bg-yellow-500 m-2">Yellow</button>
+            <button onClick={()=>setColor("pink")} className="outline-none px-4 py-1 rounded-full bg-pink-500 m-2">Pink</button>
+            <button onClick={()=>setColor("purple")} className="outline-none px-4 py-1 rounded-full bg-purple-500 m-2">Purple</button>
+            <button onClick={()=>setColor("lavender")} className="outline-none px-4 py-1 rounded-full bg-lime-500 m-2">Lavender</button>
+            <button onClick={()=>setColor("white")} className="outline-none px-4 py-1 rounded-full bg-white text-black m-2">White</button>
+            <button onClick={()=>setColor("black")} className="outline-none px-4 py-1 rounded-full text-white bg-black m-2">Black</button>
+
+            </div>
         </div>
-    </>
+    </div>
   )
 }
 
