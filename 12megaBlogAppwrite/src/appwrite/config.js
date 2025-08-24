@@ -1,4 +1,4 @@
-import conf from '../conf.js'
+import conf from '../conf/conf.js'
 import {Client , ID, Databases, Storage, Query} from "appwrite";
 
 export class Service{
@@ -13,7 +13,7 @@ export class Service{
         this.bucket = new Storage(this.client);
     }
 
-    async createPost({title, slug, content, content, featuredImage, status, userId}){
+    async createPost({title, slug, content, featuredImage, status, userId}){
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
@@ -32,7 +32,7 @@ export class Service{
         }
 
     }
-    async updatePost(slug,{title,  content, content, featuredImage, status}){
+    async updatePost(slug,{title,  content, featuredImage, status}){
         try {
             return await this.databases.updateDocument(
                 conf.appwriteDatabaseId,
