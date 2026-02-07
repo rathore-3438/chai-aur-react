@@ -13,5 +13,5 @@ export default function Button({
         ${textColor} ${className}`} {...props}>
             {children}
         </button>
-    )
+    );
 }
